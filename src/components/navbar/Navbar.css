@@ -1,0 +1,17 @@
+.header {
+    height: 100px;
+    box-shadow: 10px 0 10px #333;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo a, .header-nav p{
+    font-size: 28px;
+    color: #333;
+    font-weight: 900;
+}

@@ -1,0 +1,15 @@
+.footer-page {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.footer-page a {
+    font-size: 28px;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
