@@ -3,9 +3,10 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid'
 
 function NewUserForm({addUser}) {
+  
   const [user, setUser] = useState({
       id: uuidv4(),
-      image: '',
+      image: '/src/assets/images/image.jpg',
       firstName: '',
       lastName: '',
       age: null,
@@ -17,6 +18,7 @@ function NewUserForm({addUser}) {
   function handleSubmit(e) {
     e.preventDefault()
     addUser(user)
+    
   }
 
   return (
@@ -29,7 +31,7 @@ function NewUserForm({addUser}) {
               <span>Image url:</span>
               <input onChange={(e)=> {setUser((prev)=> {
                 return {...prev, image: e.target.value}
-              })}} type="url" required autoComplete="of"/>
+              })}} type="url" autoComplete="of"/>
             </label>
             <label>
               <span>First name:</span>
@@ -76,7 +78,7 @@ function NewUserForm({addUser}) {
               })}} type="radio" name="gender" required value='female'/>
               </label>
             </div>
-            <button type="submit" className="modal-btn">Submit</button>
+            <button className="modal-btn">Submit</button>
           </form>
         </div>
       </div>

@@ -13,7 +13,6 @@ function App() {
   const [users, setUsers] = useState([])
   const [showModal, setShowModal] = useState(false)
 
-
   function deleteUser(id) {
     setUsers((prev)=> {
       return prev.filter((user)=> {
@@ -23,13 +22,19 @@ function App() {
   }
 
   function closeModale(e) {
-    if(e.target.className === 'overlay' || e.key === "Escape") setShowModal(false)
+    if(e.target.className === 'overlay') {
+      setShowModal(false)
+    }
+    if(e.key === "Escape") {
+      setShowModal(false)
+    }
   }
 
   function addUser(user) {
     setUsers((prev)=> {
-      [...prev, user]
+      return [...prev, user]
     })
+    setShowModal(false)
   }
 
   return (
